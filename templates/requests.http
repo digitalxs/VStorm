@@ -1,0 +1,3 @@
+### Example request (REST Client extension: click "Send Request")
+GET http://localhost:8000/api/health
+Accept: application/json

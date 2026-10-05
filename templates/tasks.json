@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "composer install", "type": "shell", "command": "composer install", "problemMatcher": [] },
+    { "label": "composer update", "type": "shell", "command": "composer update", "problemMatcher": [] },
+    { "label": "npm install", "type": "shell", "command": "npm install", "problemMatcher": [] },
+    { "label": "npm run dev", "type": "shell", "command": "npm run dev", "isBackground": true, "problemMatcher": [] },
+    { "label": "npm run build", "type": "shell", "command": "npm run build", "problemMatcher": [] },
+    { "label": "PHP: serve (php -S)", "type": "shell", "command": "php -S localhost:8000 -t public", "isBackground": true, "problemMatcher": [] },
+    { "label": "Laravel: artisan serve", "type": "shell", "command": "php artisan serve", "isBackground": true, "problemMatcher": [] },
+    { "label": "Laravel: migrate", "type": "shell", "command": "php artisan migrate", "problemMatcher": [] },
+    { "label": "Symfony: console cache:clear", "type": "shell", "command": "php bin/console cache:clear", "problemMatcher": [] },
+    { "label": "Drupal: drush cr", "type": "shell", "command": "vendor/bin/drush cr", "problemMatcher": [] },
+    { "label": "WordPress: wp cache flush", "type": "shell", "command": "wp cache flush", "problemMatcher": [] },
+    { "label": "Test: PHPUnit", "type": "shell", "command": "vendor/bin/phpunit", "group": "test", "problemMatcher": [] },
+    { "label": "Analyse: PHPStan", "type": "shell", "command": "phpstan analyse", "problemMatcher": [] },
+    { "label": "Lint: PHPCS", "type": "shell", "command": "phpcs", "problemMatcher": [] },
+    { "label": "Fix: PHP-CS-Fixer", "type": "shell", "command": "php-cs-fixer fix", "problemMatcher": [] }
+  ]
+}

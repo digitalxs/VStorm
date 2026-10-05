@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "PHP: Listen for Xdebug",
+      "type": "php",
+      "request": "launch",
+      "port": 9003
+      // Docker/remote: uncomment and adjust
+      // "pathMappings": { "/var/www/html": "${workspaceFolder}" }
+    },
+    {
+      "name": "PHP: Run current script",
+      "type": "php",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "port": 0,
+      "runtimeArgs": ["-dxdebug.start_with_request=yes"],
+      "env": {
+        "XDEBUG_MODE": "debug,develop",
+        "XDEBUG_CONFIG": "client_port=${port}"
+      }
+    },
+    {
+      "name": "PHP: Built-in server (public/)",
+      "type": "php",
+      "request": "launch",
+      "runtimeArgs": ["-dxdebug.start_with_request=yes", "-S", "localhost:8000", "-t", "public"],
+      "port": 9003,
+      "serverReadyAction": { "action": "openExternally" }
+    },
+    {
+      "name": "JS: Chrome (localhost:5173)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "JS: Node current file",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}"
+    }
+  ]
+}

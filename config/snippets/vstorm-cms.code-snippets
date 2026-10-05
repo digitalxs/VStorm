@@ -1,0 +1,123 @@
+{
+  "WP: add_action": {
+    "scope": "php",
+    "prefix": "wpaction",
+    "body": ["add_action( '${1:init}', '${2:callback}'${3:, 10, 1} );"]
+  },
+  "WP: add_filter": {
+    "scope": "php",
+    "prefix": "wpfilter",
+    "body": ["add_filter( '${1:the_content}', '${2:callback}'${3:, 10, 1} );"]
+  },
+  "WP: shortcode": {
+    "scope": "php",
+    "prefix": "wpshortcode",
+    "body": [
+      "add_shortcode( '${1:name}', function ( \\$atts, \\$content = null ) {",
+      "\t\\$atts = shortcode_atts( array( '${2:key}' => '${3:default}' ), \\$atts, '${1:name}' );",
+      "\tob_start();",
+      "\t$0",
+      "\treturn ob_get_clean();",
+      "} );"
+    ]
+  },
+  "WP: WP_Query": {
+    "scope": "php",
+    "prefix": "wpquery",
+    "body": [
+      "\\$query = new WP_Query( array(",
+      "\t'post_type'      => '${1:post}',",
+      "\t'posts_per_page' => ${2:10},",
+      ") );",
+      "while ( \\$query->have_posts() ) {",
+      "\t\\$query->the_post();",
+      "\t$0",
+      "}",
+      "wp_reset_postdata();"
+    ]
+  },
+  "WP: enqueue assets": {
+    "scope": "php",
+    "prefix": "wpenqueue",
+    "body": [
+      "add_action( 'wp_enqueue_scripts', function () {",
+      "\twp_enqueue_style( '${1:handle}', get_theme_file_uri( '${2:assets/css/style.css}' ), array(), '${3:1.0.0}' );",
+      "\twp_enqueue_script( '${1:handle}', get_theme_file_uri( '${4:assets/js/app.js}' ), array(), '${3:1.0.0}', true );",
+      "} );"
+    ]
+  },
+  "Drupal: hook implementation": {
+    "scope": "php",
+    "prefix": "drhook",
+    "body": [
+      "/**",
+      " * Implements hook_${1:form_alter}().",
+      " */",
+      "function ${2:mymodule}_${1:form_alter}($0) {",
+      "}"
+    ]
+  },
+  "Drupal: service container": {
+    "scope": "php",
+    "prefix": "drservice",
+    "body": ["\\Drupal::service('${1:entity_type.manager}')$0;"]
+  },
+  "Drupal: controller": {
+    "scope": "php",
+    "prefix": "drcontroller",
+    "body": [
+      "<?php",
+      "",
+      "namespace Drupal\\\\${1:mymodule}\\\\Controller;",
+      "",
+      "use Drupal\\\\Core\\\\Controller\\\\ControllerBase;",
+      "",
+      "/**",
+      " * Controller for ${2:description}.",
+      " */",
+      "class ${3:MyController} extends ControllerBase {",
+      "",
+      "  public function ${4:content}(): array {",
+      "    return [",
+      "      '#markup' => \\$this->t('${5:Hello}'),",
+      "    ];",
+      "  }",
+      "",
+      "}"
+    ]
+  },
+  "Joomla: _JEXEC guard": {
+    "scope": "php",
+    "prefix": "jguard",
+    "body": ["defined('_JEXEC') or die;"]
+  },
+  "Joomla: application and input": {
+    "scope": "php",
+    "prefix": "japp",
+    "body": [
+      "\\$app   = \\Joomla\\CMS\\Factory::getApplication();",
+      "\\$input = \\$app->getInput();"
+    ]
+  },
+  "Joomla: plugin class": {
+    "scope": "php",
+    "prefix": "jplugin",
+    "body": [
+      "<?php",
+      "",
+      "defined('_JEXEC') or die;",
+      "",
+      "use Joomla\\CMS\\Plugin\\CMSPlugin;",
+      "",
+      "class Plg${1:Group}${2:Name} extends CMSPlugin",
+      "{",
+      "    protected \\$autoloadLanguage = true;",
+      "",
+      "    public function ${3:onContentPrepare}(\\$context, &\\$article, &\\$params, \\$page = 0)",
+      "    {",
+      "        $0",
+      "    }",
+      "}"
+    ]
+  }
+}

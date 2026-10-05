@@ -1,0 +1,79 @@
+# VStorm extension list: one Open VSX ID per line, '#' starts a comment.
+# VSCodium uses Open VSX, not the Microsoft Marketplace; an ID that is missing
+# there is skipped by install.sh and reported at the end (non-fatal).
+
+# --- Look & feel / keymap -------------------------------------------------
+k--kato.intellij-idea-keybindings
+rokoroku.vscode-theme-darcula
+PKief.material-icon-theme
+
+# --- PHP core -------------------------------------------------------------
+bmewburn.vscode-intelephense-client
+xdebug.php-debug
+neilbrayfield.php-docblocker
+MehediDracula.php-namespace-resolver
+wongjn.php-sniffer
+sanderronde.phpstan-vscode
+junstyle.php-cs-fixer
+recca0120.vscode-phpunit
+
+# --- Laravel --------------------------------------------------------------
+laravel.vscode-laravel
+onecentlin.laravel-blade
+shufo.vscode-blade-formatter
+onecentlin.laravel5-snippets
+
+# --- Symfony / Twig -------------------------------------------------------
+whatwedo.twig
+TheNouillet.symfony-vscode
+redhat.vscode-yaml
+
+# --- WordPress ------------------------------------------------------------
+johnbillion.vscode-wordpress-hooks
+wordpresstoolbox.wordpress-toolbox
+tungvn.wordpress-snippet
+
+# --- Drupal (phpcs 'Drupal' standard comes from drupal/coder, see docs) ----
+marcostazi.drupal-snippets
+
+# --- Joomla: no maintained extension; bundled snippets + Intelephense -------
+
+# --- JavaScript / TypeScript / frontend ------------------------------------
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+Vue.volar
+bradlc.vscode-tailwindcss
+dsznajder.es7-react-js-snippets
+christian-kohler.npm-intellisense
+christian-kohler.path-intellisense
+formulahendry.auto-rename-tag
+orta.vscode-jest
+vitest.explorer
+firefox-devtools.vscode-firefox-debug
+stylelint.vscode-stylelint
+
+# --- Database & HTTP client -------------------------------------------------
+cweijan.vscode-database-client2
+humao.rest-client
+
+# --- Deployment / remote files (FileZilla-style) -----------------------------
+Natizyskunk.sftp
+kelvin.vscode-sshfs
+
+# --- Git ----------------------------------------------------------------------
+eamodio.gitlens
+mhutchie.git-graph
+donjayamanne.githistory
+
+# --- Docker / DevOps -------------------------------------------------------------
+ms-azuretools.vscode-docker
+
+# --- Productivity (PhpStorm built-ins) ---------------------------------------------
+xyz.local-history
+alefragnani.Bookmarks
+Gruntfuggly.todo-tree
+usernamehw.errorlens
+EditorConfig.EditorConfig
+mikestead.dotenv
+redhat.vscode-xml
+yzhang.markdown-all-in-one

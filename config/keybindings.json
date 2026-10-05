@@ -1,0 +1,21 @@
+[
+  { "key": "alt+1", "command": "workbench.action.toggleSidebarVisibility" },
+  { "key": "alt+f12", "command": "workbench.action.terminal.toggleTerminal" },
+  { "key": "alt+9", "command": "workbench.view.scm" },
+  { "key": "alt+7", "command": "outline.focus" },
+  { "key": "ctrl+f12", "command": "workbench.action.gotoSymbol" },
+  { "key": "ctrl+shift+f12", "command": "workbench.action.toggleMaximizedPanel" },
+  { "key": "ctrl+alt+shift+l", "command": "editor.action.formatDocument", "when": "editorTextFocus && !editorReadonly" },
+  { "key": "ctrl+alt+o", "command": "editor.action.organizeImports", "when": "editorTextFocus && !editorReadonly" },
+  { "key": "ctrl+alt+shift+t", "command": "editor.action.refactor", "when": "editorHasCodeActionsProvider && editorTextFocus" },
+  { "key": "ctrl+alt+m", "command": "editor.action.codeAction", "args": { "kind": "refactor.extract.function" }, "when": "editorTextFocus" },
+  { "key": "ctrl+alt+v", "command": "editor.action.codeAction", "args": { "kind": "refactor.extract.constant" }, "when": "editorTextFocus" },
+  { "key": "shift+f10", "command": "workbench.action.debug.run", "when": "!inDebugMode" },
+  { "key": "shift+f9", "command": "workbench.action.debug.start", "when": "!inDebugMode" },
+  { "key": "ctrl+f2", "command": "workbench.action.debug.stop", "when": "inDebugMode" },
+  { "key": "ctrl+shift+f10", "command": "workbench.action.debug.run", "when": "!inDebugMode && editorTextFocus" },
+  { "key": "ctrl+shift+k", "command": "git.push" },
+  { "key": "ctrl+t", "command": "git.pull" },
+  { "key": "ctrl+e", "command": "workbench.action.openRecent" },
+  { "key": "ctrl+shift+e", "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup" }
+]
