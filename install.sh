@@ -142,11 +142,13 @@ install_composer_tools() {
   info "Installing global Composer tools (phpstan, php-cs-fixer, phpcs, Pint, WP/Drupal standards)"
   composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true || true
   local pkg
-  for pkg in phpstan/phpstan friendsofphp/php-cs-fixer laravel/pint squizlabs/php_codesniffer \
-             dealerdirect/phpcodesniffer-composer-installer phpcompatibility/php-compatibility \
-             wp-coding-standards/wpcs drupal/coder; do
+  for pkg in phpstan/phpstan friendsofphp/php-cs-fixer laravel/pint; do
     composer global require --no-interaction --quiet "$pkg" || warn "composer: could not install $pkg"
   done
+  # Coding standards must be resolved together (WPCS and Drupal Coder pin different PHPCS releases).
+  composer global require --no-interaction --quiet -W "squizlabs/php_codesniffer:^3.13" \
+    dealerdirect/phpcodesniffer-composer-installer phpcompatibility/php-compatibility \
+    wp-coding-standards/wpcs drupal/coder || warn "composer: could not install the PHPCS coding standards"
 }
 
 resolve_composer_bin() {

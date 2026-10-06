@@ -13,8 +13,8 @@ Legend: **Full** = equivalent in daily use, **Partial** = works but weaker, **Ga
 | Xdebug debugging | Listen, run-script, built-in server configs | `xdebug.php-debug`, `templates/launch.json` | Full |
 | PHPUnit / Pest runner | Test explorer | `recca0120.vscode-phpunit`, Jest/Vitest for JS | Partial |
 | Laravel | Blade, snippets, official extension | `laravel.vscode-laravel`, Blade extensions | Partial (no Laravel Idea-level model/route awareness) |
-| Symfony | Twig, Symfony support | `whatwedo.twig`, `symfony-vscode` | Partial |
-| Drupal | PHP file associations, YAML, snippets, drupal/coder | settings, `vstorm-cms.code-snippets` | Partial |
+| Symfony | Twig, Symfony support | `mblode.twig-language-2`, `symfony-vscode` | Partial |
+| Drupal | PHP file associations, YAML, snippets, drupal/coder | settings, `drupal-smart-snippets`, `vstorm-cms.code-snippets` | Partial |
 | WordPress | Hook completion, snippets, WPCS | `wordpress-hooks`, snippets, wp-coding-standards | Partial |
 | Joomla | PHP associations, snippets | `vstorm-cms.code-snippets` | Partial (no dedicated extension) |
 | JS/TS/Vue/React/Tailwind | Built-in TS server, ESLint, Prettier, Volar, Tailwind | extensions | Full |

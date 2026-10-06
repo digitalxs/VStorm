@@ -24,17 +24,16 @@ shufo.vscode-blade-formatter
 onecentlin.laravel5-snippets
 
 # --- Symfony / Twig -------------------------------------------------------
-whatwedo.twig
+mblode.twig-language-2
 TheNouillet.symfony-vscode
 redhat.vscode-yaml
 
 # --- WordPress ------------------------------------------------------------
 johnbillion.vscode-wordpress-hooks
-wordpresstoolbox.wordpress-toolbox
-tungvn.wordpress-snippet
 
 # --- Drupal (phpcs 'Drupal' standard comes from drupal/coder, see docs) ----
-marcostazi.drupal-snippets
+andrewdavidblum.drupal-smart-snippets
+Stanislav.vscode-drupal
 
 # --- Joomla: no maintained extension; bundled snippets + Intelephense -------
 
